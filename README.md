@@ -1,6 +1,6 @@
 # channo
 
-A channel library for Deno that provideds Rust-like channels backed by
+A channel library for Deno that provides Rust-like channels backed by
 [async-cell](https://github.com/zebp/async-cell).
 
 ## Example
