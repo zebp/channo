@@ -1,4 +1,4 @@
-import AsyncCell from "https://deno.land/x/async_cell@0.1.1/mod.ts";
+import AsyncCell from "https://deno.land/x/async_cell@0.2.0/mod.ts";
 
 /**
  * Options to configure a {@link Channel}.

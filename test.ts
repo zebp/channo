@@ -1,8 +1,8 @@
-import { Channel, ChannelFullError } from "./mod.ts";
 import {
   assertEquals,
   assertThrows,
-} from "https://deno.land/std/testing/asserts.ts";
+} from "https://deno.land/std@0.93.0/testing/asserts.ts";
+import { Channel, ChannelFullError } from "./mod.ts";
 
 function sleep(duration: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, duration));
@@ -63,5 +63,28 @@ Deno.test({
 
     channel.push("allowed");
     assertThrows(() => channel.push("not allowed"), ChannelFullError);
+  },
+});
+
+Deno.test({
+  name: "no double messages",
+  fn: async () => {
+    const channel = new Channel();
+    let takes = 0;
+
+    async function listen() {
+      for await (const _ of channel.stream()) {
+        takes++;
+      }
+    }
+
+    listen();
+    listen();
+
+    channel.push(10);
+
+    await sleep(10);
+
+    assertEquals(takes, 1);
   },
 });
