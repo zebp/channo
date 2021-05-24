@@ -22,8 +22,8 @@ jobs:
         with:
           deno-version: ${{ matrix.deno-version }}
       - name: Lint Deno Module
-        run: deno fmt --check
+        run: deno fmt --check mod.ts bundle.ts test.ts
       - name: Build Deno Module
         run: deno run --reload mod.ts
       - name: Test Deno Module
-        run: deno test --allow-none
+        run: deno test --allow-none test.ts

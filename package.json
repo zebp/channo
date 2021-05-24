@@ -1,0 +1,29 @@
+{
+  "name": "channo",
+  "version": "0.1.1",
+  "description": "A channel library for Deno that provides Rust-like channels backed by [async-cell](https://github.com/zebp/async-cell).",
+  "main": "dist/mod.js",
+  "types": "dist/mod.d.ts",
+  "scripts": {
+    "prepublish": "deno run -A --unstable bundle.ts",
+    "build": "deno run -A --unstable bundle.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zebp/channo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zebp/channo/issues"
+  },
+  "homepage": "https://github.com/zebp/channo#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/runtime": "^7.14.0"
+  }
+}
