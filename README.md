@@ -1,5 +1,9 @@
 # channo
 
+![npm](https://img.shields.io/npm/v/channo)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/zebp/channo/ci)
+![NPM](https://img.shields.io/npm/l/channo)
+
 A channel library for Deno that provides Rust-like channels backed by
 [async-cell](https://github.com/zebp/async-cell).
 

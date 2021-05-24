@@ -13,8 +13,8 @@
     "url": "git+https://github.com/zebp/channo.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Zebulon Piasecki",
+  "license": "Unlicense",
   "bugs": {
     "url": "https://github.com/zebp/channo/issues"
   },
